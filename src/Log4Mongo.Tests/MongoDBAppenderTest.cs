@@ -27,6 +27,8 @@ namespace Log4Mongo.Tests
 			ThreadContext.Properties.Clear();
 			MongoUrl url = new MongoUrl("mongodb://localhost/log4net");
 
+
+
 			MongoClient client = new MongoClient(url);
 			_db = client.GetDatabase(url.DatabaseName);
 			_db.DropCollectionAsync(LogsCollectionName);
